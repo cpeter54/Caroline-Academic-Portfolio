@@ -1,0 +1,27 @@
+var attributeValue = $feature.Program;
+
+var popUpContent = "";
+
+if (attributeValue == "FRAF") {
+    popUpContent = "Project Title: " + $feature.ProjectTitle + "\n" + "\n" +
+                   "Term and Year: " + $feature.TermYear + "\n" + "\n" +
+                   "Recipient Name: " + $feature["Recipient_Name"] + "\n" + "\n" +
+                   "Recipient Department: " +  + "\n" + "\n" +
+                   "Award Type: " + $feature.Type;
+}
+else if (attributeValue == "DRA") {
+    popUpContent = "Recipient Name: " + $feature["Recipient_Name"] + "\n" + "\n" +
+                    "Term and Year: " + $feature.TermYear + "\n" + "\n" +
+                    "Recipient Department: " + $feature["College_Department"] + "\n" + "\n" +
+                    "Award Type: " + $feature.Type + "\n" + "\n";
+}
+else if (attributeValue == "AURA") {
+    popUpContent = "Project Title: " + $feature.ProjectTitle + "\n" + "\n" +
+                    "Term and Year: " + $feature.TermYear + "\n" + "\n" +
+                    "Recipient Department: " + $feature["College_Department"] + "\n" + "\n" +
+                    "Recipient Name: " + $feature["Recipient_Name"] + "\n" + "\n" +
+                    "Award Type: " + $feature.Type + "\n" + "\n"
+                    "Faculty Advisor and Department: " + $feature["Advisor_Department"] + "\n" + "\n";
+}
+
+return popUpContent;
